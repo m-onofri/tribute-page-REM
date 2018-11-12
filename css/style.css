@@ -1,0 +1,307 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 24px;
+}
+
+h1 {
+  font-family: 'Freckle Face', cursive;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+h2, h3, p, a {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+h3 {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+p, a {
+  font-size: 0.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/***************/
+
+.dark_bg {
+  background-color: #2b2b2b;
+  color: #ffffff;
+}
+
+/*****************/
+
+#header {
+  width: 100%;
+  text-align: center;
+}
+
+#title {
+  padding: 2rem 0;
+}
+
+figure {
+  text-align: center;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+#img-caption {
+  font-size: 0.75rem;
+  font-style: italic;
+  padding-top: 0.5rem;
+}
+
+/****************/
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 1rem;
+}
+
+nav a {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/****************/
+
+#tribute-info {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+
+  grid-template-areas:
+  "history discography discography"
+  "video video add_info";
+}
+
+.block_title {
+  padding-bottom: 1rem;
+}
+
+.block_subtitle {
+  padding: 0 0 1.25rem;
+}
+
+#history {
+  grid-area: history;
+}
+
+#history h2 {
+  text-align: center;
+}
+
+.text_content p {
+  padding-bottom: 25px;
+  line-height: 1.5;
+}
+
+#discography {
+  grid-area: discography;
+}
+
+#discography p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.records_container {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.records {
+  display: flex;
+  justify-content: space-between;
+}
+
+.record {
+  text-align: center;
+  width: 100px;
+  padding-bottom: 25px;
+}
+
+.cover {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+}
+
+.album_year {
+  padding: 0.3rem 0;
+}
+
+#murmur .cover {background: url("../images/cover_sprite.png") 0 0;}
+#reckoning .cover {background: url("../images/cover_sprite.png") -100px 0;}
+#fables .cover {background: url("../images/cover_sprite.png") -200px 0;}
+#pageant .cover {background: url("../images/cover_sprite.png") -300px 0;}
+#document .cover {background: url("../images/cover_sprite.png") -400px 0;}
+
+#green .cover {background: url("../images/cover_sprite.png") 0 -100px;}
+#out_of_time .cover {background: url("../images/cover_sprite.png") -100px -100px;}
+#automatic .cover {background: url("../images/cover_sprite.png") -200px -100px;}
+#monster .cover {background: url("../images/cover_sprite.png") -300px -100px;}
+#adventures .cover {background: url("../images/cover_sprite.png") -400px -100px;}
+
+#up .cover {background: url("../images/cover_sprite.png") 0 -200px;}
+#reveal .cover {background: url("../images/cover_sprite.png") -100px -200px;}
+#around_the_sun .cover {background: url("../images/cover_sprite.png") -200px -200px;}
+#accelerate .cover {background: url("../images/cover_sprite.png") -300px -200px;}
+#collapse_into_now .cover {background: url("../images/cover_sprite.png") -400px -200px;}
+
+#additional_info {
+  grid-area: add_info;
+  padding: 0 4% 0 4%;
+}
+
+.resp-container {
+  grid-area: video;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  width: 100%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/*************************/
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+}
+
+footer a {
+  color: #ff007d;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+footer p {
+  line-height: 2;
+}
+
+/*************************/
+
+@media only screen and (max-width : 1000px) {
+
+  #tribute-info {
+    padding: 1.5rem 0;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+
+    grid-template-areas:
+    "history "
+    "add_info"
+    "video"
+    "discography";
+  }
+
+  #history, #notes, #discography {
+    padding: 0 1rem;
+  }
+}
+
+/**************************/
+
+@media only screen and (max-width : 700px) {
+  nav a {
+    font-size: 20px;
+  }
+
+  .records {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .record {
+    flex: 0 0 auto;
+    width: 120px;
+  }
+
+  .cover {
+    margin: auto;
+  }
+}
+
+/**************************/
+
+@media only screen and (max-width : 500px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    padding-bottom: 8%;
+  }
+
+  footer a {
+    font-size: 12px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}
+
+/***************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
