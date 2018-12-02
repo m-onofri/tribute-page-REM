@@ -17,6 +17,7 @@ h2, h3, p, a {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
+  color: #000;
 }
 
 h2 {
@@ -160,6 +161,11 @@ nav a {
 
 .album_year {
   padding: 0.3rem 0;
+}
+
+.album_title:hover {
+  font-weight: bold;
+  color: #ff007d;
 }
 
 #murmur .cover {background: url("../images/cover_sprite.png") 0 0;}
