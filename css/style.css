@@ -56,11 +56,11 @@ a {
 
 .menu_icon {
   display: block;
-  height: 28px;
-  width: 28px;
+  height: 40px;
+  width: 40px;
   position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 1.75rem;
+  right: 2rem;
 }
 
 .show {
@@ -288,6 +288,11 @@ footer p {
 /**************************/
 
 @media only screen and (max-width : 500px) {
+  #title {
+    text-align: left;
+    padding: 1rem 0 1rem 2rem;
+  }
+
   .show {
     display: block;
   }
