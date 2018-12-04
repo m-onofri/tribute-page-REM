@@ -54,42 +54,55 @@ a {
   padding-bottom: 1rem;
 }
 
-h1#title {
-  padding-bottom: 0;
-}
-
 .menu_icon {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  margin: 1rem auto 0;
+  margin: auto;
 }
 
 .bar {
-  width: 50px;
+  width: 40px;
   height: 5px;
   background-color: #fff;
   border-radius: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   transition: 0.4s;
 }
 
 .change .bar2 {
-  transform: rotate(-60deg) translate(5px, 10px);
+  transform: rotate(-60deg) translate(2px, 9px);
 }
 
 .change .bar3 {
-  transform: rotate(60deg) translate(-23px, 0px);
+  transform: rotate(60deg) translate(-14px, 4px) ;
+  
 }
-
 .show {
   display: none;
 }
 
 #title {
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
+
+/****************/
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+nav a {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/******************/
 
 figure {
   text-align: center;
@@ -104,22 +117,6 @@ img {
   font-size: 0.75rem;
   font-style: italic;
   padding-top: 0.5rem;
-}
-
-/****************/
-
-nav {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding-bottom: 1rem;
-}
-
-nav a {
-  color: #ffffff;
-  font-size: 1.25rem;
-  font-weight: bold;
 }
 
 /****************/
@@ -308,6 +305,10 @@ footer p {
 /**************************/
 
 @media only screen and (max-width : 500px) {
+  body.stack {
+    padding-top: 110px;
+  }
+
   .show {
     display: block;
   }
@@ -315,6 +316,7 @@ footer p {
   nav {
     flex-direction: column;
     text-align: center;
+    padding-top: 1rem;
   }
 
   nav a {
@@ -324,6 +326,32 @@ footer p {
 
   .hide {
     display: none;
+  }
+
+  #header h1#title{
+    font-size: 1.5rem;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  #header.sticky{
+    overflow: hidden;
+    padding: 0;
+    z-index: 100;
+  }
+
+  #header.sticky #title{
+    float: left;
+    margin-left: 1rem;
+  }
+
+  #header.sticky .menu_icon{
+    float: right;
+    margin: 1rem;
   }
 
   footer a {
