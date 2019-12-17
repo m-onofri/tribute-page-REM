@@ -77,7 +77,7 @@ a {
 
 .change .bar3 {
   transform: rotate(60deg) translate(-14px, 4px) ;
-  
+   
 }
 .show {
   display: none;
