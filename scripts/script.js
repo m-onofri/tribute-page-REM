@@ -9,6 +9,11 @@ menu_icon.addEventListener('click', () => {
   menu_icon.classList.toggle("change");
 });
 
+navigation.addEventListener('click', () => {
+  navigation.classList.toggle("hide");
+  menu_icon.classList.remove("change");
+});
+
 window.addEventListener("scroll", function() {
   if (window.pageYOffset >= sticky) {
     header.classList.add("sticky");
